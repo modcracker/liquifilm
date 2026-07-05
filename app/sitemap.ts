@@ -1,10 +1,10 @@
 import { MetadataRoute } from 'next';
-import { WET_GATE_PAGES, WIDER_TOPICS, GLOSSARY_TERMS, DIRECTORY_ENTRIES } from '@/lib/data';
+import { WET_GATE_PAGES, WIDER_TOPICS, GLOSSARY_TERMS, DIRECTORY_ENTRIES, HIRING_PAGES } from '@/lib/data';
 
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = 'https://liquifilm.com';
+  const siteUrl = 'https://www.liquifilm.com';
 
   // Base routes
   const routes = [
@@ -13,11 +13,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/glossary',
     '/directory',
     '/faq',
+    '/case-studies',
+    '/verification',
   ].map((route) => ({
     url: `${siteUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1.0 : 0.8,
+    priority: route === '' ? 1.0 : route === '/case-studies' ? 0.9 : 0.8,
   }));
 
   // Dynamic Wet Gate Printing Articles
@@ -52,11 +54,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
+  // Dynamic Hiring Pages
+  const hiringRoutes = HIRING_PAGES.map((page) => ({
+    url: `${siteUrl}/hiring/${page.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.5,
+  }));
+
   return [
     ...routes,
     ...wetGateRoutes,
     ...topicRoutes,
     ...glossaryRoutes,
     ...directoryRoutes,
+    ...hiringRoutes,
   ];
 }

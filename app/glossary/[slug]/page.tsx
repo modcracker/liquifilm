@@ -46,7 +46,7 @@ export default async function GlossaryTermPage({ params }: Props) {
   const term = GLOSSARY_TERMS[termIdx];
   const relatedTerms = GLOSSARY_TERMS.filter((t) => t.category === term.category && t.slug !== term.slug).slice(0, 5);
 
-  const siteUrl = "https://liquifilm.com";
+  const siteUrl = "https://www.liquifilm.com";
   const pageUrl = `${siteUrl}/glossary/${term.slug}`;
 
   // Schemas

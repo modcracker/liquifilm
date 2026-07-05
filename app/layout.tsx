@@ -26,14 +26,37 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Liquifilm — Film Restoration & Preservation Hub',
   description: 'The definitive open-access reference knowledge base for technical motion picture conservation, physical repair, and optical liquid wet gate scanning.',
-  metadataBase: new URL('https://liquifilm.com'),
+  metadataBase: new URL('https://www.liquifilm.com'),
+  keywords: [
+    'film restoration',
+    'motion picture preservation',
+    'optical liquid wet gate scanning',
+    'photochemical film repair',
+    'wet gate scanning',
+    'film gate scratch mitigation',
+    'cinematic archiving',
+    'film digitizing technology',
+    'John Ott wet gate',
+    'film preservation directory'
+  ],
   alternates: {
     canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   openGraph: {
     title: 'Liquifilm — Film Restoration & Preservation Hub',
     description: 'The definitive open-access reference knowledge base for technical motion picture conservation, physical repair, and optical liquid wet gate scanning.',
-    url: 'https://liquifilm.com',
+    url: 'https://www.liquifilm.com',
     siteName: 'Liquifilm',
     images: [
       {
@@ -58,12 +81,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://liquifilm.com/#organization",
+    "@id": "https://www.liquifilm.com/#organization",
     "name": "Liquifilm",
-    "url": "https://liquifilm.com",
+    "url": "https://www.liquifilm.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://liquifilm.com/icon.png"
+      "url": "https://www.liquifilm.com/icon.png"
     },
     "description": "The definitive open-access reference knowledge base for technical motion picture conservation, physical repair, and optical liquid wet gate scanning.",
     "contactPoint": [

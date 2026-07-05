@@ -12,7 +12,7 @@ import archivalVaultRacks from '@/src/assets/images/archival_vault_racks_1783060
 
 export default function HomePage() {
   // Build the JSON-LD schemas
-  const siteUrl = "https://liquifilm.com";
+  const siteUrl = "https://www.liquifilm.com";
   
   const websiteSchema = {
     "@context": "https://schema.org",

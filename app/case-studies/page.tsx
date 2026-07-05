@@ -4,11 +4,26 @@ import Image from 'next/image';
 import { Home, ChevronRight, FileText, AlertTriangle, ArrowRight, ClipboardCheck } from 'lucide-react';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import GlossaryParser from '@/components/GlossaryParser';
+import type { Metadata } from 'next';
 
 import restorersLightTable from '@/src/assets/images/restorers_light_table_1783060348379.webp';
 
+export const metadata: Metadata = {
+  title: 'Motion Picture Case Studies & Archival Reports | Liquifilm',
+  description: 'Learn how film restoration and preservation projects are formally documented, tracking sprocket condition, chemical washes, and high-fidelity scanning metrics.',
+  alternates: {
+    canonical: '/case-studies',
+  },
+  openGraph: {
+    title: 'Motion Picture Case Studies & Archival Reports | Liquifilm',
+    description: 'Learn how film restoration and preservation projects are formally documented, tracking sprocket condition, chemical washes, and high-fidelity scanning metrics.',
+    url: '/case-studies',
+    type: 'website',
+  },
+};
+
 export default function CaseStudiesExplainerPage() {
-  const siteUrl = "https://liquifilm.com";
+  const siteUrl = "https://www.liquifilm.com";
   const pageUrl = `${siteUrl}/case-studies`;
 
   const breadcrumbSchema = {

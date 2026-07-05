@@ -50,7 +50,7 @@ export default async function HiringGuidePage({ params }: Props) {
   const prevPage = pageIdx > 0 ? HIRING_PAGES[pageIdx - 1] : null;
   const nextPage = pageIdx < HIRING_PAGES.length - 1 ? HIRING_PAGES[pageIdx + 1] : null;
 
-  const siteUrl = "https://liquifilm.com";
+  const siteUrl = "https://www.liquifilm.com";
   const pageUrl = `${siteUrl}/hiring/${page.slug}`;
 
   // Schemas

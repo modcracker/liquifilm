@@ -45,7 +45,7 @@ export default async function DirectoryEntryPage({ params }: Props) {
 
   const entry = DIRECTORY_ENTRIES[entryIdx];
 
-  const siteUrl = "https://liquifilm.com";
+  const siteUrl = "https://www.liquifilm.com";
   const pageUrl = `${siteUrl}/directory/${entry.slug}`;
 
   // Schemas

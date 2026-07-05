@@ -51,7 +51,7 @@ export default async function WiderTopicPage({ params }: Props) {
   const prevPage = pageIdx > 0 ? WIDER_TOPICS[pageIdx - 1] : null;
   const nextPage = pageIdx < WIDER_TOPICS.length - 1 ? WIDER_TOPICS[pageIdx + 1] : null;
 
-  const siteUrl = "https://liquifilm.com";
+  const siteUrl = "https://www.liquifilm.com";
   const pageUrl = `${siteUrl}/topics/${page.slug}`;
 
   // Schemas

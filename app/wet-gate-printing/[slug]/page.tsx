@@ -51,7 +51,7 @@ export default async function WetGateArticlePage({ params }: Props) {
   const prevPage = pageIdx > 0 ? WET_GATE_PAGES[pageIdx - 1] : null;
   const nextPage = pageIdx < WET_GATE_PAGES.length - 1 ? WET_GATE_PAGES[pageIdx + 1] : null;
 
-  const siteUrl = "https://liquifilm.com";
+  const siteUrl = "https://www.liquifilm.com";
   const pageUrl = `${siteUrl}/wet-gate-printing/${page.slug}`;
 
   // Schemas

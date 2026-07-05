@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 export default function WetGateIndexPage() {
-  const siteUrl = "https://liquifilm.com";
+  const siteUrl = "https://www.liquifilm.com";
   const sectionUrl = `${siteUrl}/wet-gate-printing`;
 
   const breadcrumbSchema = {
